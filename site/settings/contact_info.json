@@ -1,0 +1,9 @@
+{
+  "phone": "ffffff",
+  "email": "asdasd",
+  "address": {
+    "street": "asd",
+    "street2": "asd",
+    "city": "asd"
+  }
+}
