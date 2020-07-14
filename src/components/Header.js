@@ -47,49 +47,49 @@ const Header = (props) => {
         )
     }
 
-    const renderTitle = () => {
-        return (
-            <h3
-                style={{
-                    fontFamily: `source sans pro, sans-serif`,
-                    margin: 0,
-                }}
-            >
-                <Link   style={{
-                            boxShadow: `none`,
-                            color: `inherit`,
-                        }}
-                        to={`/`}
-                >
-                    {props.title}
-                </Link>
-            </h3>
-        )
-    }
+    // const renderTitle = () => {
+    //     return (
+    //         <h3
+    //             style={{
+    //                 fontFamily: `source sans pro, sans-serif`,
+    //                 margin: 0,
+    //             }}
+    //         >
+    //             <Link   style={{
+    //                         boxShadow: `none`,
+    //                         color: `inherit`,
+    //                     }}
+    //                     to={`/`}
+    //             >
+    //                 {props.title}
+    //             </Link>
+    //         </h3>
+    //     )
+    // }
 
-    const renderNavMenu = () => {
+    // const renderNavMenu = () => {
 
-        return(
-            <nav style={{display:'flex',alignItems:'center'}}>
-                            <p
-                style={{
-                //     fontFamily: `Montserrat, sans-serif`,
-                    marginTop: 0,
-                    marginBottom: 0,
-                }}
-            >
-                <Link   style={{
-                            boxShadow: `none`,
-                            color: `inherit`,
-                        }}
-                        to={`/projects`}
-                >
-                    projects
-                </Link>
-            </p>
-            </nav>
-        )
-    }
+    //     return(
+    //         <nav style={{display:'flex',alignItems:'center'}}>
+    //                         <p
+    //             style={{
+    //             //     fontFamily: `Montserrat, sans-serif`,
+    //                 marginTop: 0,
+    //                 marginBottom: 0,
+    //             }}
+    //         >
+    //             <Link   style={{
+    //                         boxShadow: `none`,
+    //                         color: `inherit`,
+    //                     }}
+    //                     to={`/projects`}
+    //             >
+    //                 projects
+    //             </Link>
+    //         </p>
+    //         </nav>
+    //     )
+    // }
 
     return (
         <header style={{ backgroundColor: 'lightgrey',display:'flex',alignItems:'center',justifyContent:'space-between' }}>
