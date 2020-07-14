@@ -1,17 +1,29 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Starter Blog`,
+    title: `{ yakov.dev() }`,
     author: {
-      name: `Kyle Mathews`,
-      summary: `who lives and works in San Francisco building useful things.`,
+      name: `Yakov Rakhamimov`,
+      summary: `Frontend Web Developer`,
     },
     description: `A starter blog demonstrating what Gatsby can do.`,
     siteUrl: `https://gatsby-starter-blog-demo.netlify.app/`,
     social: {
-      twitter: `kylemathews`,
+      twitter: `yakovrakhamimov`,
+      github: `jacobra19`
     },
   },
   plugins: [
+    {
+      resolve: `gatsby-plugin-google-fonts`,
+      options: {
+        fonts: [
+          `Source Code Pro`,
+          `limelight`,
+          `source sans pro\:300,400,500,600,700` // you can also specify font weights and styles
+        ],
+        display: 'swap'
+      }
+    },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
