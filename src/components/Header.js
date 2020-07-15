@@ -1,33 +1,36 @@
 import React from "react"
 import { Link } from "gatsby"
-
 import { rhythm, scale } from "../utils/typography"
-const Header = (props) => {
-    const rootPath = `${__PATH_PREFIX__}/`
-    let header
-    if (props.location.pathname === rootPath) {
-        header = (
+
+const Header = ({isMainPage,title}) => {
+
+    const renderHeader = () => {
+
+        return(
             <h1
+            style={{
+                ...scale(1.5),
+                marginBottom: rhythm(1.5),
+                marginTop: 0,
+            }}
+        >
+            <Link
                 style={{
-                    ...scale(1.5),
-                    marginBottom: rhythm(1.5),
-                    marginTop: 0,
+                    boxShadow: `none`,
+                    color: `inherit`,
+                    fontFamily: 'Source Code Pro'
                 }}
+                to={`/`}
             >
-                <Link
-                    style={{
-                        boxShadow: `none`,
-                        color: `inherit`,
-                        fontFamily: 'Source Code Pro'
-                    }}
-                    to={`/`}
-                >
-                    {props.title}
-                </Link>
-            </h1>
+                {title}
+            </Link>
+        </h1>
         )
-    } else {
-        header = (
+    }
+
+    const renderDenseHeader = () => {
+
+        return(
             <h3
                 style={{
                     fontFamily: `Montserrat, sans-serif`,
@@ -41,7 +44,7 @@ const Header = (props) => {
                     }}
                     to={`/`}
                 >
-                    {props.title}
+                    {title}
                 </Link>
             </h3>
         )
@@ -95,7 +98,7 @@ const Header = (props) => {
         <header style={{ backgroundColor: 'lightgrey',display:'flex',alignItems:'center',justifyContent:'space-between' }}>
             {/* {renderTitle()}
             {renderNavMenu()} */}
-            {header}
+            { isMainPage ? renderHeader() : renderDenseHeader() }
         </header>
 
     );
