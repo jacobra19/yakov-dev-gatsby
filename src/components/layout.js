@@ -1,8 +1,8 @@
 import React from "react"
+import Header from './header'
 
 import { rhythm } from "../utils/typography"
 
-import Header from './header'
 
 const Layout = ({ location, title, children }) => {
 
