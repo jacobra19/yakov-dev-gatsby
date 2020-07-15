@@ -6,6 +6,8 @@ import { rhythm } from "../utils/typography"
 
 
 const Layout = ({ location, title, children }) => {
+    const rootPath = `${__PATH_PREFIX__}/`
+    let isMainPage = location.pathname === rootPath
 
     return (
         <div
@@ -16,7 +18,7 @@ const Layout = ({ location, title, children }) => {
                 padding: `${rhythm(1.5)} ${rhythm(3 / 4)}`,
             }}
         >
-            <Header title={title} location={location}/>
+            <Header isMainPage={isMainPage} title={title}/>
             <main>{children}</main>
             <Footer/>
         </div>
